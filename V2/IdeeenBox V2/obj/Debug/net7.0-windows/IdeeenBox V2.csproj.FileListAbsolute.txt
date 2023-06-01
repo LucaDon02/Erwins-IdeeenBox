@@ -1,0 +1,47 @@
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.csproj.AssemblyReference.cache
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2_MarkupCompile.cache
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2_MarkupCompile.lref
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\IdeeenBox V2.exe
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\IdeeenBox V2.deps.json
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\IdeeenBox V2.runtimeconfig.json
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\IdeeenBox V2.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\IdeeenBox V2.pdb
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\SendGrid.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\bin\Debug\net7.0-windows\StarkbankEcdsa.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.g.resources
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.AssemblyInfoInputs.cache
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.AssemblyInfo.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.csproj.CoreCompileInputs.cache
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.csproj.CopyComplete
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\refint\IdeeenBox V2.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.pdb
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.genruntimeconfig.cache
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ref\IdeeenBox V2.dll
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\EditProfilePage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\EditProfilePage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ForgotPasswordPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ForgotPasswordPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MainPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MainPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MainWindow.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MainWindow.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ConfirmEmailPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\LoginPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MenuPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\LoginPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ConfirmEmailPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\MenuPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\RegisterPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\RegisterPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ChangePasswordPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\ChangePasswordPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeasPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\NewIdeaPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeasPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\NewIdeaPage.baml
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\OwnIdeaPage.g.cs
+C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\OwnIdeaPage.baml
