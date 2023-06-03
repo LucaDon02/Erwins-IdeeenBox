@@ -109,7 +109,7 @@ namespace IdeeenBox_V2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/IdeeenBox V2;component/forgotpasswordpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/IdeeenBox V2;V1.0.0.0;component/forgotpasswordpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ForgotPasswordPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

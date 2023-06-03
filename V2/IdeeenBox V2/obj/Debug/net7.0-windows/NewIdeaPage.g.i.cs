@@ -125,7 +125,7 @@ namespace IdeeenBox_V2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/IdeeenBox V2;component/newideapage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/IdeeenBox V2;V1.0.0.0;component/newideapage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\NewIdeaPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

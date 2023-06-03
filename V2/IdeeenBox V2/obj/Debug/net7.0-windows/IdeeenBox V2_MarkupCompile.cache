@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\obj\Debug\net7.0-windows\
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\
 IdeeenBox_V2
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Gebruiker\source\repos\IdeeenBox V2\IdeeenBox V2\App.xaml
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\App.xaml
 12609720839
 
 191889286387
 2011336853861
 ChangePasswordPage.xaml;ConfirmEmailPage.xaml;EditProfilePage.xaml;ForgotPasswordPage.xaml;IdeasPage.xaml;LoginPage.xaml;MainPage.xaml;MainWindow.xaml;MenuPage.xaml;NewIdeaPage.xaml;OwnIdeaPage.xaml;RegisterPage.xaml;
 
-False
+True
 
