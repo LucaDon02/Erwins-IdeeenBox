@@ -34,7 +34,7 @@ namespace IdeeenBox_V2
                 ErrorLabel.Content = "Wrong email and/or password or the email isn't confirmed.";
                 ErrorLabel.Visibility = Visibility.Visible;
             }
-            else _mainWindow.Content = new MenuPage(_mainWindow, _lastPage);
+            else _mainWindow.Content = new MenuPage(_mainWindow);
         }
 
         private void Return(object sender, RoutedEventArgs e)

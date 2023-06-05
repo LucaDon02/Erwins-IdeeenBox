@@ -7,9 +7,6 @@ internal static class Program
 
     private static async Task Main()
     {
-        // ToDo: A lot of testing
-        // ToDo: Email for creating an account when an idea is shared with an non existing account
-        // ToDo: Make password sending more secure
         Console.Title = "Erwin's ideeënbox";
         LoginSystem.Users = SaveSystem.Read();
 
@@ -463,6 +460,7 @@ internal static class Program
                     {
                         foreach (var user in idea.SharedWith) user.SharedIdeas.Remove(idea);
                         LoginSystem.CurrentUser.Ideas.Remove(idea);
+                        SaveSystem.Save(LoginSystem.Users);
                     }
                     break;
                 case "5":

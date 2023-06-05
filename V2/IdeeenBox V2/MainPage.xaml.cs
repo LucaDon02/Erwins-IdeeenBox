@@ -24,23 +24,32 @@ namespace IdeeenBox_V2
             _mainWindow = mainWindow;
         }
 
+        public void ShowMessage()
+        {
+            MessageLabel.Visibility = Visibility.Visible;
+        }
+
         private void Login(object sender, RoutedEventArgs e)
         {
+            MessageLabel.Visibility = Visibility.Collapsed;
             _mainWindow.Content = new LoginPage(_mainWindow, this);
         }
 
         private void Register(object sender, RoutedEventArgs e)
         {
+            MessageLabel.Visibility = Visibility.Collapsed;
             _mainWindow.Content = new RegisterPage(_mainWindow, this);
         }
 
         private void ConfirmEmail(object sender, RoutedEventArgs e)
         {
+            MessageLabel.Visibility = Visibility.Collapsed;
             _mainWindow.Content = new ConfirmEmailPage(_mainWindow, this);
         }
 
         private void ForgotPassword(object sender, RoutedEventArgs e)
         {
+            MessageLabel.Visibility = Visibility.Collapsed;
             _mainWindow.Content = new ForgotPasswordPage(_mainWindow, this );
         }
     }

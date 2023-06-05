@@ -182,9 +182,9 @@ namespace IdeeenBox_V2
                 string emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
                 if (Regex.IsMatch(EmailBox.Text, emailRegex) && !LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)) && !LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text)))
                 {
-                    LoginSystem.Register(NameBox.Text, EmailBox.Text, PasswordBox.Password);
+                    EmailSender.SendConfirmationCode(LoginSystem.Register(NameBox.Text, EmailBox.Text, PasswordBox.Password));
+                    ((MainPage)_lastPage).ShowMessage();
                     Return(sender, e);
-                    // ToDo: Screen for email confirmation sent
                 }
             }
         }

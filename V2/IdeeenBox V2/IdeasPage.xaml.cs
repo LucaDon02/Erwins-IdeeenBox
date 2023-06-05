@@ -28,29 +28,64 @@ namespace IdeeenBox_V2
             _mainWindow = mainWindow;
             _lastPage = lastPage;
 
+            Refresh();
+        }
+
+        public void Refresh()
+        {
             var ownIdeas = new List<String>();
             var counter = 1;
-            foreach (var idea in LoginSystem.CurrentUser.Ideas) ownIdeas.Add(counter + ". " + idea.Name);
+            foreach (var idea in LoginSystem.CurrentUser.Ideas.Select(i => i.Name)) ownIdeas.Add(counter + ". " + idea);
 
             var sharedIdeas = new List<String>();
             counter = 1;
-            foreach (var idea in LoginSystem.CurrentUser.SharedIdeas) sharedIdeas.Add(counter + ". " + idea.Owner + " - " + idea.Name);
+            foreach (var idea in LoginSystem.CurrentUser.SharedIdeas) sharedIdeas.Add(counter + ". " + idea.Owner.Name + " - " + idea.Name);
 
             OwnIdeasList.ItemsSource = ownIdeas;
+            SharedIdeasList.ItemsSource = sharedIdeas;
         }
 
         private void OwnIdeasList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string pattern = @"^(\d+)";
+            if (OwnIdeasList.SelectedItem == null) return;
 
+            string pattern = @"^(\d+)";
             var match = Regex.Match(OwnIdeasList.SelectedItem.ToString(), pattern);
 
             if (match.Success)
             {
                 if (Int32.TryParse(match.Groups[1].Value, out int j))
                 {
-                    ErrorLabel.Content = LoginSystem.CurrentUser.Ideas[j - 1].Name;
+                    ErrorLabel.Visibility = Visibility.Collapsed;
+                    ErrorLabel.Content = "";
+                    OwnIdeasList.SelectedItem = null;
+
+                    _mainWindow.Content = new OwnIdeaPage(_mainWindow, this, LoginSystem.CurrentUser.Ideas[j - 1]);
+                }
+                else
+                {
+                    ErrorLabel.Content = "Something went wrong.";
                     ErrorLabel.Visibility = Visibility.Visible;
+                }
+            }
+        }
+
+        private void SharedIdeasList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (SharedIdeasList.SelectedItem == null) return;
+
+            string pattern = @"^(\d+)";
+            var match = Regex.Match(SharedIdeasList.SelectedItem.ToString(), pattern);
+
+            if (match.Success)
+            {
+                if (Int32.TryParse(match.Groups[1].Value, out int j))
+                {
+                    ErrorLabel.Visibility = Visibility.Collapsed;
+                    ErrorLabel.Content = "";
+                    SharedIdeasList.SelectedItem = null;
+
+                    _mainWindow.Content = new SharedIdeaPage(_mainWindow, this, LoginSystem.CurrentUser.Ideas[j - 1]);
                 }
                 else
                 {

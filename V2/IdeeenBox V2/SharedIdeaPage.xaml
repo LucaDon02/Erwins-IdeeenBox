@@ -1,0 +1,31 @@
+﻿<Page x:Class="IdeeenBox_V2.SharedIdeaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IdeeenBox_V2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SharedIdeaPage">
+
+    <Grid>
+        <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Return"/>
+        <Grid HorizontalAlignment="Center" Height="192" VerticalAlignment="Center" Width="638">
+            <Grid HorizontalAlignment="Center" Height="136" VerticalAlignment="Top">
+
+                <Grid x:Name="Name" HorizontalAlignment="Center" Width="238" Margin="0,0,0,110">
+                    <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
+                    <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="78,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="160"/>
+                </Grid>
+
+                <Grid x:Name="Description" HorizontalAlignment="Center" Width="238" Margin="0,26,0,0">
+                    <Label x:Name="DescriptionLabel" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.037,0.367" Margin="0,40,0,0"/>
+                    <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Margin="78,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="160" Height="96" FontSize="8"/>
+                </Grid>
+            </Grid>
+            <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Foreground="Red" Width="638" Visibility="Collapsed"/>
+            <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Click="DeleteButton_Click" Foreground="Red"/>
+        </Grid>
+
+    </Grid>
+</Page>

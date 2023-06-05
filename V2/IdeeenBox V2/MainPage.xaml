@@ -9,12 +9,13 @@
       Title="Main page">
 
     <Grid>
-        <Grid HorizontalAlignment="Center" Height="62" VerticalAlignment="Center" Width="398">
+        <Grid HorizontalAlignment="Center" Height="96" VerticalAlignment="Center" Width="398">
             <Label Content="Welcome" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Button x:Name="LoginButton" Content="Log in" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Click="Login"/>
             <Button x:Name="RegisterButton" Content="Register" HorizontalAlignment="Left" Margin="75,41,0,0" VerticalAlignment="Top" Click="Register"/>
             <Button x:Name="ConfirmEmailButton" Content="Confirm email code" HorizontalAlignment="Left" Margin="160,41,0,0" VerticalAlignment="Top" Click="ConfirmEmail"/>
             <Button x:Name="ForgotPasswordButton" Content="Forgot password" HorizontalAlignment="Left" Margin="305,41,0,0" VerticalAlignment="Top" Click="ForgotPassword"/>
+            <Label x:Name="MessageLabel" Content="Registration successful, Check your Email for the confirmation code." HorizontalAlignment="Center" Height="30" Margin="0,66,0,0" VerticalAlignment="Top" Width="398" Foreground="Lime" Visibility="Collapsed"/>
         </Grid>
     </Grid>
 </Page>

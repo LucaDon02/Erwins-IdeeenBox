@@ -30,14 +30,9 @@ namespace IdeeenBox_V2
             NameBox.Text = LoginSystem.CurrentUser.Name;
         }
 
-        private void Return(object sender, RoutedEventArgs e)
-        {
-            // ToDo: clean this
-            _mainWindow.Content = new MenuPage(_mainWindow, this);
-        }
-
         private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            // ToDo: fix error message showing when not needed to
             if (!NameBox.Equals("") && NameBox.Text.Equals(LoginSystem.CurrentUser.Name))
             {
                 ErrorLabel.Content = "The changed username cant be the same as the old username";
@@ -63,6 +58,30 @@ namespace IdeeenBox_V2
                 SaveSystem.Save(LoginSystem.Users);
                 Return(sender, e);
             }
+        }
+
+        private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            // ToDo: confirmation window
+            var currentUser = LoginSystem.CurrentUser;
+            
+            foreach (var user in LoginSystem.Users)
+                foreach (var idea in  user.Ideas)
+                    if (idea.SharedWith.Contains(currentUser))
+                        idea.SharedWith.Remove(currentUser);
+
+            LoginSystem.Users.Remove(currentUser);
+            
+            SaveSystem.Save(LoginSystem.Users);
+
+            _mainWindow.Content = new MainPage(_mainWindow);
+            LoginSystem.CurrentUser = null;
+        }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+            // ToDo: clean this
+            _mainWindow.Content = new MenuPage(_mainWindow);
         }
     }
 }

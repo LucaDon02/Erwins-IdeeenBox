@@ -9,6 +9,33 @@
       Title="OwnIdeaPage">
 
     <Grid>
-        
+        <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Return"/>
+        <Grid HorizontalAlignment="Center" Height="192" VerticalAlignment="Center" Width="638">
+            <Grid HorizontalAlignment="Left" Height="136" VerticalAlignment="Top">
+
+                <Grid x:Name="Name" HorizontalAlignment="Center" Width="238" Margin="0,0,0,110">
+                    <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
+                    <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="78,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="131"/>
+                    <Button x:Name="EditNameButton" Content="Edit" HorizontalAlignment="Left" Margin="214,0,0,0" VerticalAlignment="Center" Click="EditNameButton_Click"/>
+                </Grid>
+
+                <Grid x:Name="Description" HorizontalAlignment="Center" Width="238" Margin="0,26,0,0">
+                    <Label x:Name="DescriptionLabel" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.037,0.367" Margin="0,40,0,0"/>
+                    <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Margin="78,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="131" Height="96" FontSize="8"/>
+                    <Button x:Name="EditDescriptionButton" Content="Edit" HorizontalAlignment="Left" Margin="214,43,0,0" VerticalAlignment="Top" Click="EditDescriptionButton_Click"/>
+                </Grid>
+            </Grid>
+            <Grid Margin="400,0,0,0" Height="136" VerticalAlignment="Top" HorizontalAlignment="Left" Width="238">
+                <Label x:Name="AddEmailLabel" Content="E-Mail:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.037,0.367"/>
+                <TextBox x:Name="AddEmailBox" HorizontalAlignment="Left" Margin="51,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+                <Button x:Name="AddEmailButton" Content="Add" HorizontalAlignment="Left" Margin="200,3,0,0" VerticalAlignment="Top" Click="AddEmailButton_Click" Width="38"/>
+                <Grid x:Name="SharedWith" Margin="0,26,0,0">
+                    <ListBox x:Name="SharedWithList" Margin="0,0,43,0" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                    <Button x:Name="DeleteShareButton" Content="Delete" Margin="200,45,0,45" Click="DeleteShareButton_Click"/>
+                </Grid>
+            </Grid>
+            <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Foreground="Red" Width="638" Visibility="Collapsed"/>
+            <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Click="DeleteButton_Click" Foreground="Red"/>
+        </Grid>
     </Grid>
 </Page>

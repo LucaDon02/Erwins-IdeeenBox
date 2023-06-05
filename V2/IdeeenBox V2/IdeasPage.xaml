@@ -10,7 +10,8 @@
 
     <Grid>
         <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Return"/>
-        <ListBox x:Name="OwnIdeasList" HorizontalAlignment="Center" Height="150" VerticalAlignment="Center" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="OwnIdeasList_SelectionChanged"/>
+        <ListBox x:Name="OwnIdeasList" HorizontalAlignment="Center" Height="150" VerticalAlignment="Top" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="OwnIdeasList_SelectionChanged" Margin="0,55,0,0"/>
         <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Center" Margin="0,89,0,0" VerticalAlignment="Top" Foreground="Red" Width="400" Visibility="Collapsed"/>
+        <ListBox x:Name="SharedIdeasList" HorizontalAlignment="Center" Height="150" VerticalAlignment="Top" Width="400" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="SharedIdeasList_SelectionChanged" Margin="0,245,0,0"/>
     </Grid>
 </Page>

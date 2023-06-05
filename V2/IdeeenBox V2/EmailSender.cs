@@ -11,7 +11,8 @@ public static class EmailSender
     private const string SenderAddress = "ErwinsIdeeenbox@outlook.com";
     private const string SenderName = "Erwins Ideeënbox";
     
-    public static async Task<Response> SendPassword(User user) {
+    public static async Task<Response> SendPassword(User user)
+    {
         const string subject = "Forgotten password";
         var receiverEmail = new EmailAddress(user.Email, user.Name);
         var password = user.RegeneratePassword();
@@ -44,14 +45,22 @@ public static class EmailSender
         return await SendMail(receiverEmail, subject, textContent, htmlContent);
     }
 
+    public static async Task<Response> SendRegistrationRequest(string senderName, string email)
+    {
+        var receiverEmail = new EmailAddress(email, null);
+        const string subject = "Registration request";
+        var textContent = "Hi. " + senderName + " tried to share an idea with you. Register to view this idea.";
+        var htmlContent = "Hi,<br><br><strong>" + senderName + "</strong> tried to share an idea with you. Register to view this idea.";
+
+        return await SendMail(receiverEmail, subject, textContent, htmlContent);
+    }
+
     private static async Task<Response> SendMail(EmailAddress receiverEmail, string subject, string textContent, string htmlContent)
     {
-        // Console.WriteLine(textContent);
         var senderEmail = new EmailAddress(SenderAddress, SenderName);
         var client = new SendGridClient(ApiKey);
         var msg = MailHelper.CreateSingleEmail(senderEmail, receiverEmail, subject, textContent, htmlContent);
         
-        Console.WriteLine("You will receive this email shortly.");
         return await client.SendEmailAsync(msg).ConfigureAwait(false);
     }
 }

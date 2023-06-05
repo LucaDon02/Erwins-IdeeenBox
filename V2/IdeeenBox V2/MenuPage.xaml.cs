@@ -18,19 +18,17 @@ namespace IdeeenBox_V2
     public partial class MenuPage : Page
     {
         private Window _mainWindow;
-        private Page _lastPage;
 
-        public MenuPage(Window mainWindow, Page lastPage)
+        public MenuPage(Window mainWindow)
         {
             InitializeComponent();
             WelcomeLabel.Content = "Welcome " + LoginSystem.CurrentUser.Name + "!";
             _mainWindow = mainWindow;
-            _lastPage = lastPage;
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = _lastPage;
+            _mainWindow.Content = new MainPage(_mainWindow);
             LoginSystem.CurrentUser = null;
         }
 

@@ -16,11 +16,21 @@ public static class LoginSystem
         return true;
     }
 
-    public static void Register(string username, string email, string password)
+    public static User Register(string username, string email, string password)
     {
-        var user = new User(name: username, email: email, password: password);
-        Users.Add(user);
+        var newUser = new User(name: username, email: email, password: password);
+        foreach (var user in Users)
+            foreach (var idea in user.Ideas)
+                foreach (var userEmail in idea.SharedWithEmail.ToList())
+                    if (userEmail.Equals(email))
+                    {
+                        idea.SharedWithEmail.Remove(email);
+                        idea.SharedWith.Add(newUser);
+                        newUser.SharedIdeas.Add(idea);
+                    }
+        Users.Add(newUser);
         SaveSystem.Save(Users);
+        return newUser;
     }
 
     public static bool ConfirmEmail(User user, string code)

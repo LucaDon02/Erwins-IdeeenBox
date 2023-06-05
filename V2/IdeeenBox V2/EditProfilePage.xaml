@@ -10,15 +10,16 @@
 
     <Grid>
         <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Return"/>
-        
-        <Grid HorizontalAlignment="Center" Height="78" VerticalAlignment="Center" Width="212">
+
+        <Grid HorizontalAlignment="Center" Height="78" VerticalAlignment="Center" Width="337">
             <Grid x:Name="Name" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="212">
                 <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
                 <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="NameBox_TextChanged"/>
             </Grid>
 
             <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
-            <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Left" Margin="92,57,0,0" VerticalAlignment="Top" Click="EditButton_Click"/>
+            <Button x:Name="EditButton" Content="Edit" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Click="EditButton_Click"/>
         </Grid>
+        <Button x:Name="DeleteAccountButton" Content="Delete account" Margin="698,20,0,0" VerticalAlignment="Top" Foreground="Red" HorizontalAlignment="Left" Width="82" Click="DeleteAccountButton_Click"/>
     </Grid>
 </Page>

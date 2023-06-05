@@ -10,18 +10,20 @@
 
     <Grid>
         <Button x:Name="ReturnButton" Content="Return" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Click="Return"/>
-        
-        <Grid x:Name="Name" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="212" Margin="0,137,0,0">
-            <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
-            <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        </Grid>
+        <Grid HorizontalAlignment="Center" Height="190" Margin="0,137,0,0" VerticalAlignment="Top">
 
-        <Grid x:Name="Description" HorizontalAlignment="Center" Height="115" VerticalAlignment="Center" Width="212">
-            <Label x:Name="DescriptionLabel" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.037,0.367" Margin="0,40,0,0"/>
-            <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Margin="73,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="129" Height="95" FontSize="8"/>
-        </Grid>
+            <Grid x:Name="Name" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="212">
+                <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
+                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="74,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="128"/>
+            </Grid>
 
-        <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Left" Margin="294,282,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
-        <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+            <Grid x:Name="Description" HorizontalAlignment="Center" Height="116" VerticalAlignment="Center" Width="212">
+                <Label x:Name="DescriptionLabel" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.037,0.367" Margin="0,40,0,0"/>
+                <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Margin="73,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="129" Height="95" FontSize="8"/>
+            </Grid>
+
+            <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Center" Margin="0,145,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
+            <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Click="AddButton_Click"/>
+        </Grid>
     </Grid>
 </Page>

@@ -89,7 +89,7 @@ namespace IdeeenBox_V2
 
         private void Return(object sender, RoutedEventArgs e)
         {
-            _mainWindow.Content = new MenuPage(_mainWindow, this);
+            _mainWindow.Content = new MenuPage(_mainWindow);
         }
 
         private void PasswordBox_LostFocus(object sender, RoutedEventArgs e)
