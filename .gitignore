@@ -1,8 +1,6 @@
-obj/
 .idea/
 .vs/
+obj/
+bin/
 
-V2/.vs/
-V1/IdeeenBox/obj/
-V2/IdeeenBox V2/obj/
-V1/.idea/
+V1/IdeeenBox.sln.DotSettings.user
