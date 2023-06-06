@@ -30,15 +30,21 @@ namespace IdeeenBox_V2
             NameBox.Text = LoginSystem.CurrentUser.Name;
         }
 
-        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void NameBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            // ToDo: fix error message showing when not needed to
-            if (!NameBox.Equals("") && NameBox.Text.Equals(LoginSystem.CurrentUser.Name))
+            var name = NameBox.Text;
+
+            if (name.Equals(""))
+            {
+                ErrorLabel.Content = "The username cant be empty";
+                ErrorLabel.Visibility = Visibility.Visible;
+            }
+            else if (name.Equals(LoginSystem.CurrentUser.Name))
             {
                 ErrorLabel.Content = "The changed username cant be the same as the old username";
                 ErrorLabel.Visibility = Visibility.Visible;
             }
-            else if (!NameBox.Equals("") && LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)))
+            else if (LoginSystem.Users.Any(user => user.Name.Equals(name)))
             {
                 ErrorLabel.Content = "This username already exists";
                 ErrorLabel.Visibility = Visibility.Visible;
@@ -52,9 +58,13 @@ namespace IdeeenBox_V2
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)))
+            var name = NameBox.Text;
+
+            if (!name.Equals("") &&
+                !name.Equals(LoginSystem.CurrentUser.Name) &&
+                !LoginSystem.Users.Any(user => user.Name.Equals(name)))
             {
-                LoginSystem.CurrentUser.Name = NameBox.Text;
+                LoginSystem.CurrentUser.Name = name;
                 SaveSystem.Save(LoginSystem.Users);
                 Return(sender, e);
             }
@@ -62,26 +72,31 @@ namespace IdeeenBox_V2
 
         private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            // ToDo: confirmation window
-            var currentUser = LoginSystem.CurrentUser;
-            
-            foreach (var user in LoginSystem.Users)
-                foreach (var idea in  user.Ideas)
-                    if (idea.SharedWith.Contains(currentUser))
-                        idea.SharedWith.Remove(currentUser);
+            var confirmationWindow = new DeleteIdeaConfirmationWindow("Are you sure you want to delete your account?");
+            confirmationWindow.Owner = _mainWindow;
+            confirmationWindow.ShowDialog();
 
-            LoginSystem.Users.Remove(currentUser);
-            
-            SaveSystem.Save(LoginSystem.Users);
+            if (confirmationWindow.IsConfirmed)
+            {
+                var currentUser = LoginSystem.CurrentUser;
 
-            _mainWindow.Content = new MainPage(_mainWindow);
-            LoginSystem.CurrentUser = null;
+                foreach (var user in LoginSystem.Users)
+                    foreach (var idea in user.Ideas)
+                        if (idea.SharedWith.Contains(currentUser))
+                            idea.SharedWith.Remove(currentUser);
+
+                LoginSystem.Users.Remove(currentUser);
+
+                SaveSystem.Save(LoginSystem.Users);
+
+                _mainWindow.Content = new MainPage(_mainWindow);
+                LoginSystem.CurrentUser = null;
+            }
         }
 
         private void Return(object sender, RoutedEventArgs e)
         {
-            // ToDo: clean this
-            _mainWindow.Content = new MenuPage(_mainWindow);
+            _mainWindow.Content = _lastPage;
         }
     }
 }

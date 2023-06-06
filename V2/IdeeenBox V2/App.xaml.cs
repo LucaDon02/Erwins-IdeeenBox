@@ -11,7 +11,6 @@ namespace IdeeenBox_V2
 {
     public partial class App : Application
     {
-        // ToDo: EditProfilePage Useless error
         // ToDo: Make password sending more secure
         // ToDo: Upload build V2 to GitHub
         // ToDo: Make saved file public

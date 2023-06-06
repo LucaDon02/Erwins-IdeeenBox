@@ -14,7 +14,7 @@
         <Grid HorizontalAlignment="Center" Height="78" VerticalAlignment="Center" Width="337">
             <Grid x:Name="Name" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="212">
                 <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
-                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="NameBox_TextChanged"/>
+                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" LostFocus="NameBox_LostFocus"/>
             </Grid>
 
             <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="Red" Visibility="Collapsed"/>
