@@ -72,7 +72,7 @@ namespace IdeeenBox_V2
 
         private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            var confirmationWindow = new DeleteIdeaConfirmationWindow("Are you sure you want to delete your account?");
+            var confirmationWindow = new DeleteIdeaConfirmationWindow(_mainWindow, "Are you sure you want to delete your account?");
             confirmationWindow.Owner = _mainWindow;
             confirmationWindow.ShowDialog();
 

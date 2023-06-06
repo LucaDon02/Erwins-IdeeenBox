@@ -11,9 +11,8 @@ namespace IdeeenBox_V2
 {
     public partial class App : Application
     {
+        // ToDo: Make saved file public accessible by mutliple users simultaneously
         // ToDo: Make password sending more secure
-        // ToDo: Upload build V2 to GitHub
-        // ToDo: Make saved file public
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);

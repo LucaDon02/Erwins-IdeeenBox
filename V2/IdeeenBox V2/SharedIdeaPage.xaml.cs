@@ -40,7 +40,7 @@ namespace IdeeenBox_V2
 
         private void UnfollowButton_Click(object sender, RoutedEventArgs e)
         {
-            var confirmationWindow = new DeleteIdeaConfirmationWindow("Are you sure you want to unfollow this idea?");
+            var confirmationWindow = new DeleteIdeaConfirmationWindow(_mainWindow, "Are you sure you want to unfollow this idea?");
             confirmationWindow.Owner = _mainWindow;
             confirmationWindow.ShowDialog();
 

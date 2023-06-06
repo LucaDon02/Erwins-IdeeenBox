@@ -155,7 +155,7 @@ namespace IdeeenBox_V2
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            var confirmationWindow = new DeleteIdeaConfirmationWindow();
+            var confirmationWindow = new DeleteIdeaConfirmationWindow(_mainWindow);
             confirmationWindow.Owner = _mainWindow;
             confirmationWindow.ShowDialog();
 

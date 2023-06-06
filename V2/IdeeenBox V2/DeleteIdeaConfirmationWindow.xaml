@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IdeeenBox_V2"
         mc:Ignorable="d"
-        Title="DeleteIdeaConfirmationWindow" Height="165" Width="330">
+        Title="Erwin's Ideeënbox" Height="165" Width="330">
     <Window.Resources>
         <Style x:Key="YesButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="Green" />

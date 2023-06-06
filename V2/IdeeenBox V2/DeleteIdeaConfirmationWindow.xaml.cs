@@ -17,16 +17,25 @@ namespace IdeeenBox_V2
     public partial class DeleteIdeaConfirmationWindow : Window
     {
         public bool IsConfirmed { get; private set; }
-        public DeleteIdeaConfirmationWindow()
+        private Window _mainWindow;
+        public DeleteIdeaConfirmationWindow(Window mainWindow)
         {
             InitializeComponent();
+
+            _mainWindow = mainWindow;
+
+            this.Icon = mainWindow.Icon;
             Topmost = true;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
-        public DeleteIdeaConfirmationWindow(string label)
+        public DeleteIdeaConfirmationWindow(Window mainWindow, string label)
         {
             InitializeComponent();
+
+            _mainWindow = mainWindow;
+
+            this.Icon = mainWindow.Icon;
             Topmost = true;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
 

@@ -19,7 +19,12 @@ namespace IdeeenBox_V2
         public MainWindow()
         {
             InitializeComponent();
+
+            Uri iconUri = new Uri("pack://application:,,,/icon.ico", UriKind.RelativeOrAbsolute);
+            this.Icon = BitmapFrame.Create(iconUri);
+
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             this.Content = new MainPage(this);
         }
     }
