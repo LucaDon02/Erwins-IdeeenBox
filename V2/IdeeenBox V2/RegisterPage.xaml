@@ -14,12 +14,12 @@
         <Grid HorizontalAlignment="Center" Height="142" VerticalAlignment="Center" Width="328">
             <Grid x:Name="Name" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="212">
                 <Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
-                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="NameBox_TextChanged"/>
+                <TextBox x:Name="NameBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" LostFocus="InputBox_LostFocus"/>
             </Grid>
 
             <Grid x:Name="Email" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="212" Margin="0,31,0,0">
                 <Label x:Name="EmailLabel" Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.037,0.367"/>
-                <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" TextChanged="EmailBox_TextChanged"/>
+                <TextBox x:Name="EmailBox" HorizontalAlignment="Left" Margin="82,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" LostFocus="InputBox_LostFocus"/>
             </Grid>
             
             <Grid x:Name="Password" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top" Width="328" Margin="0,62,0,0">

@@ -85,7 +85,7 @@ namespace IdeeenBox_V2
                     ErrorLabel.Content = "";
                     SharedIdeasList.SelectedItem = null;
 
-                    _mainWindow.Content = new SharedIdeaPage(_mainWindow, this, LoginSystem.CurrentUser.Ideas[j - 1]);
+                    _mainWindow.Content = new SharedIdeaPage(_mainWindow, this, LoginSystem.CurrentUser.SharedIdeas[j - 1]);
                 }
                 else
                 {

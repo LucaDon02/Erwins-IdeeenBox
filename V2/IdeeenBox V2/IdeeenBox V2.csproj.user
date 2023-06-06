@@ -13,6 +13,9 @@
     <Compile Update="ConfirmEmailPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="DeleteIdeaConfirmationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="EditProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ConfirmEmailPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteIdeaConfirmationWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="EditProfilePage.xaml">

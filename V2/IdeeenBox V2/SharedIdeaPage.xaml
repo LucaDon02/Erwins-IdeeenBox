@@ -24,7 +24,7 @@
                 </Grid>
             </Grid>
             <Label x:Name="ErrorLabel" Content="error" HorizontalAlignment="Center" Margin="0,141,0,0" VerticalAlignment="Top" Foreground="Red" Width="638" Visibility="Collapsed"/>
-            <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Click="DeleteButton_Click" Foreground="Red"/>
+            <Button x:Name="UnfollowButton" Content="Unfollow" HorizontalAlignment="Center" Margin="0,172,0,0" VerticalAlignment="Top" Click="UnfollowButton_Click" Foreground="Red"/>
         </Grid>
 
     </Grid>

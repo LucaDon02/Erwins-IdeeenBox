@@ -29,127 +29,36 @@ namespace IdeeenBox_V2
             _lastPage = lastPage;
         }
 
-        /*private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void InputBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (ErrorLabel.Content.Equals("This username already exists"))
-            {
-                if (!EmailBox.Text.Equals("") && !LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text)))
-                {
-                    ErrorLabel.Content = "This email already exists";
-                    ErrorLabel.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ErrorLabel.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "";
-                }
-            }
-        }
+            var name = NameBox.Text;
+            var email = EmailBox.Text;
 
-        private void NameBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            var name = ((TextBox)sender).Text;
-            if (!name.Equals("") && LoginSystem.Users.Any(user => user.Name.Equals(name)))
+            if (!name.Equals("") && LoginSystem.Users.Any(user => user.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
             {
                 ErrorLabel.Content = "This username already exists";
                 ErrorLabel.Visibility = Visibility.Visible;
-            } else
+                return;
+            }
+            else if (!email.Equals(""))
             {
-                if (!EmailBox.Text.Equals("") && !LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text)))
+                string emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+                if (!Regex.IsMatch(EmailBox.Text, emailRegex))
+                {
+                    ErrorLabel.Content = "This email is invalid";
+                    ErrorLabel.Visibility = Visibility.Visible;
+                    return;
+                }
+                else if (LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text, StringComparison.OrdinalIgnoreCase)))
                 {
                     ErrorLabel.Content = "This email already exists";
                     ErrorLabel.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ErrorLabel.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "";
+                    return;
                 }
             }
-        }
-
-        private void EmailBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (ErrorLabel.Content.Equals("This email already exists"))
-            {
-                if (!NameBox.Equals("") && !LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)))
-                {
-                    ErrorLabel.Content = "This username already exists";
-                    ErrorLabel.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ErrorLabel.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "";
-                }
-            }
-        }
-
-        private void EmailBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            var email = ((TextBox)sender).Text;
-            if (!email.Equals("") && !LoginSystem.Users.Any(user => user.Email.Equals(email)))
-            {
-                ErrorLabel.Content = "This email already exists";
-                ErrorLabel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                if (!NameBox.Equals("") && !LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)))
-                {
-                    ErrorLabel.Content = "This username already exists";
-                    ErrorLabel.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ErrorLabel.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "";
-                }
-            }
-        }*/
-
-        private void NameBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            // ToDo: Fix
-            if (!NameBox.Equals("") && LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)))
-            {
-                ErrorLabel.Content = "This username already exists";
-                ErrorLabel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                ErrorLabel.Visibility = Visibility.Collapsed;
-                ErrorLabel.Content = "";
-            }
-        }
-
-        private void EmailBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            string emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            if (!Regex.IsMatch(EmailBox.Text, emailRegex))
-            {
-                ErrorLabel.Content = "This email is invalid";
-                ErrorLabel.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                // ToDo: Fix
-                if (!EmailBox.Text.Equals("") && LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text)))
-                {
-                    ErrorLabel.Content = "This email already exists";
-                    ErrorLabel.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    ErrorLabel.Visibility = Visibility.Collapsed;
-                    ErrorLabel.Content = "";
-                }
-            }
-        }
-
-        private void Return(object sender, RoutedEventArgs e)
-        {
-            _mainWindow.Content = _lastPage;
+            
+            ErrorLabel.Visibility = Visibility.Collapsed;
+            ErrorLabel.Content = "";
         }
 
         private void PasswordBoxShown_TextChanged(object sender, TextChangedEventArgs e)
@@ -180,13 +89,20 @@ namespace IdeeenBox_V2
             else
             {
                 string emailRegex = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-                if (Regex.IsMatch(EmailBox.Text, emailRegex) && !LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text)) && !LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text)))
+                if (Regex.IsMatch(EmailBox.Text, emailRegex) &&
+                    !LoginSystem.Users.Any(user => user.Name.Equals(NameBox.Text, StringComparison.OrdinalIgnoreCase)) &&
+                    !LoginSystem.Users.Any(user => user.Email.Equals(EmailBox.Text, StringComparison.OrdinalIgnoreCase)))
                 {
                     EmailSender.SendConfirmationCode(LoginSystem.Register(NameBox.Text, EmailBox.Text, PasswordBox.Password));
                     ((MainPage)_lastPage).ShowMessage();
                     Return(sender, e);
                 }
             }
+        }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.Content = _lastPage;
         }
     }
 }

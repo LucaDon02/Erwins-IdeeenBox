@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +11,7 @@ public static class LoginSystem
     
     public static bool Login(string email, string password)
     {
-        var user = Users.FirstOrDefault(user => user.Email.Equals(email));
+        var user = Users.FirstOrDefault(user => user.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         if (user is not { EmailConfirmationCode: null } || !user.ComparePassword(password)) return false;
         CurrentUser = user;
         return true;

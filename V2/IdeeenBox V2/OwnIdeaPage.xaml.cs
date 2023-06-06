@@ -155,12 +155,18 @@ namespace IdeeenBox_V2
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            // ToDo: confirmation window
-            foreach (var user in _idea.SharedWith) user.SharedIdeas.Remove(_idea);
-            LoginSystem.CurrentUser.Ideas.Remove(_idea);
-            SaveSystem.Save(LoginSystem.Users);
+            var confirmationWindow = new DeleteIdeaConfirmationWindow();
+            confirmationWindow.Owner = _mainWindow;
+            confirmationWindow.ShowDialog();
 
-            Return(sender, e);
+            if (confirmationWindow.IsConfirmed)
+            {
+                foreach (var user in _idea.SharedWith) user.SharedIdeas.Remove(_idea);
+                LoginSystem.CurrentUser.Ideas.Remove(_idea);
+                SaveSystem.Save(LoginSystem.Users);
+
+                Return(sender, e);
+            }
         }
 
         private void Return(object sender, RoutedEventArgs e)

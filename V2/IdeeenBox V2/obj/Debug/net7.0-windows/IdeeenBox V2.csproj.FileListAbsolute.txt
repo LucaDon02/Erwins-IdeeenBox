@@ -92,3 +92,7 @@ C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-w
 C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.pdb
 C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\IdeeenBox V2.genruntimeconfig.cache
 C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\ref\IdeeenBox V2.dll
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\DeleteIdeaConfirmationWindow.g.cs
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\SharedIdeaPage.g.cs
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\DeleteIdeaConfirmationWindow.baml
+C:\Users\Gebruiker\Documents\GitHub\IdeeenBox\V2\IdeeenBox V2\obj\Debug\net7.0-windows\SharedIdeaPage.baml

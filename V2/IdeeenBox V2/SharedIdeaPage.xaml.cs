@@ -38,14 +38,21 @@ namespace IdeeenBox_V2
             DescriptionBox.Text = _idea.Description;
         }
 
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        private void UnfollowButton_Click(object sender, RoutedEventArgs e)
         {
-            // ToDo: confirmation window
-            _idea.SharedWith.Remove(LoginSystem.CurrentUser);
-            LoginSystem.CurrentUser.SharedIdeas.Remove(_idea);
-            SaveSystem.Save(LoginSystem.Users);
 
-            Return(sender, e);
+            var confirmationWindow = new DeleteIdeaConfirmationWindow("Are you sure you want to unfollow this idea?");
+            confirmationWindow.Owner = _mainWindow;
+            confirmationWindow.ShowDialog();
+
+            if (confirmationWindow.IsConfirmed)
+            {
+                _idea.SharedWith.Remove(LoginSystem.CurrentUser);
+                LoginSystem.CurrentUser.SharedIdeas.Remove(_idea);
+                SaveSystem.Save(LoginSystem.Users);
+
+                Return(sender, e);
+            }
         }
 
         private void Return(object sender, RoutedEventArgs e)

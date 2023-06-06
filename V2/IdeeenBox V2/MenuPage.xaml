@@ -10,7 +10,7 @@
     
     <Grid>
         <Label x:Name="WelcomeLabel" Content="Error" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="733"/>
-        <Button x:Name="LogoutButton" Content="Logout" HorizontalAlignment="Left" Margin="748,10,0,0" VerticalAlignment="Top" Click="LogoutButton_Click"/>
+        <Button x:Name="LogoutButton" Content="Logout" HorizontalAlignment="Left" Margin="748,10,0,0" VerticalAlignment="Top" Click="LogoutButton_Click" Foreground="Red"/>
         
         <Grid HorizontalAlignment="Center" Height="68" VerticalAlignment="Center" Width="264">
             <Button x:Name="EditProfileButton" Content="Edit profile" HorizontalAlignment="Left" Margin="18,0,0,0" VerticalAlignment="Top" Click="EditProfileButton_Click"/>

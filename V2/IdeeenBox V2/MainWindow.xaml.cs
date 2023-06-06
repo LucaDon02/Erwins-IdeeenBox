@@ -19,6 +19,7 @@ namespace IdeeenBox_V2
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.Content = new MainPage(this);
         }
     }
